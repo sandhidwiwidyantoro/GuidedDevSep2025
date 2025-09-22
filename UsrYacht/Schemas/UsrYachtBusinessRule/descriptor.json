@@ -4,6 +4,7 @@
     "Name": "UsrYachtBusinessRule",
     "ModifiedOnUtc": "\/Date(1758553236000)\/",
     "ManagerName": "AddonSchemaManager",
-    "Caption": "Yacht (Business rules)"
+    "Caption": "Yacht (Business rules)",
+    "DependsOn": []
   }
 }
