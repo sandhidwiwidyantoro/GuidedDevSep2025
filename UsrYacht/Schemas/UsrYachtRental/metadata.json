@@ -18,6 +18,10 @@
 = MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.JC1 []
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D38 true
 + MetaData.Schema.D2 {
   "UId": "68ad383e-599c-09f1-1e9d-cd12abb3fbff",
   "A2": "UsrAmount",
@@ -82,7 +86,6 @@
   "S4": "61d2bbcc-e266-45ba-b069-328ebaa2066a",
   "E2": 1,
   "E6": true,
-  "E20": true,
   "E9": true,
   "E17": "UsrParentYachtId",
   "E18": "UsrParentYachtUsrName"

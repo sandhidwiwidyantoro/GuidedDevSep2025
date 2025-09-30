@@ -7,16 +7,16 @@
 			<Item Name="Columns.UsrCity.Caption" Value="City" />
 			<Item Name="Columns.UsrComment.Caption" Value="Comment" />
 			<Item Name="Columns.UsrCountry.Caption" Value="Country" />
-			<Item Name="Columns.UsrCrewNumber.Caption" Value="Crew number " />
+			<Item Name="Columns.UsrCrewNumber.Caption" Value="Crew count" />
 			<Item Name="Columns.UsrDriveType.Caption" Value="Drive type" />
 			<Item Name="Columns.UsrLength.Caption" Value="Length, ft" />
 			<Item Name="Columns.UsrManager.Caption" Value="Manager" />
 			<Item Name="Columns.UsrName.Caption" Value="Name" />
 			<Item Name="Columns.UsrNumber.Caption" Value="Number" />
-			<Item Name="Columns.UsrPassengersNumber.Caption" Value="Passengers number" />
-			<Item Name="Columns.UsrPrice.Caption" Value="Price per day, USD" />
+			<Item Name="Columns.UsrPassengersNumber.Caption" Value="Passengers count" />
+			<Item Name="Columns.UsrPrice.Caption" Value="Price per day, EUR" />
 			<Item Name="Columns.UsrStatus.Caption" Value="Status" />
-			<Item Name="Columns.UsrTicketPrice.Caption" Value="Ticket price, USD" />
+			<Item Name="Columns.UsrTicketPrice.Caption" Value="Ticket price, EUR" />
 		</Items>
 	</Group>
 </Resources>
