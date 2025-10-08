@@ -8,6 +8,7 @@
       "Name": "BaseMiniPageTemplate"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Company search input page"
+    "Caption": "Company search input page",
+    "DependsOn": []
   }
 }

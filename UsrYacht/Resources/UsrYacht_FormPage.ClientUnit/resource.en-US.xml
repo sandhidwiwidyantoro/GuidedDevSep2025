@@ -18,13 +18,15 @@
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_n50tao9_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_0d32omc_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_ky45zb8_caption.Value" Value="Actions" />
-			<Item Name="LocalizableStrings.LengthCannotBeLess.Value" Value="Length cannot be less than 3 m" />
+			<Item Name="LocalizableStrings.LengthCannotBeLess.Value" Value="Length must be greater than 4" />
 			<Item Name="LocalizableStrings.ManagerEmail_caption.Value" Value="Email address" />
 			<Item Name="LocalizableStrings.ManagerEmail_label.Value" Value="Manager Email" />
 			<Item Name="LocalizableStrings.MultiSelect_Categories_label.Value" Value="Categories" />
 			<Item Name="LocalizableStrings.PassengersNumberCannotBeLess.Value" Value="Passengers number cannot be less than 1." />
-			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 100 USD" />
+			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price must be greater than 100" />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Pust me!" />
+			<Item Name="LocalizableStrings.PushYachtRentalButton_caption.Value" Value="Push Yacht Rental" />
+			<Item Name="LocalizableStrings.RunAveragePriceYachtWebService_caption.Value" Value="Run average price web service" />
 			<Item Name="LocalizableStrings.RunCalcAvgTicketPriceProcessMenuItem_caption.Value" Value="Run Calc avg ticker price process" />
 			<Item Name="LocalizableStrings.RunMaxPriceWebServiceMenuItem_caption.Value" Value="Run Max price web service" />
 		</Items>

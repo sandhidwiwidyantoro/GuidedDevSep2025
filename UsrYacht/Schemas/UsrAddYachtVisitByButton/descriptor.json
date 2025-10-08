@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "80a01c80-9a3c-4a25-a1c3-c46d049efbbc",
+    "Name": "UsrAddYachtVisitByButton",
+    "ModifiedOnUtc": "\/Date(1759567672000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Add Yacht Visit By Button",
+    "DependsOn": []
+  }
+}

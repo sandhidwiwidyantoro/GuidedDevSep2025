@@ -2,7 +2,6 @@
   "Properties": {
     "CreatedInVersion": "8.3.0.3074",
     "Group": "MiniPage",
-    "OptionalProperties": "{}",
     "SchemaType": "AngularSchema"
   }
 }

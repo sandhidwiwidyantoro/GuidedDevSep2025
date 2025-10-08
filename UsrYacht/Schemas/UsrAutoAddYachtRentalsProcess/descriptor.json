@@ -4,6 +4,7 @@
     "Name": "UsrAutoAddYachtRentalsProcess",
     "ModifiedOnUtc": "\/Date(1759203998000)\/",
     "ManagerName": "ProcessSchemaManager",
-    "Caption": "Auto add yacht rentals process"
+    "Caption": "Auto add yacht rentals process",
+    "DependsOn": []
   }
 }

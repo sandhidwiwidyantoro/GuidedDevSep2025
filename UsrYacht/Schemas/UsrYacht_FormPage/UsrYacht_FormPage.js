@@ -87,6 +87,80 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 			},
 			{
 				"operation": "insert",
+				"name": "FlexContainer_fiqa0at",
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"items": [],
+					"fitContent": true,
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch",
+					"justifyContent": "end",
+					"gap": "small",
+					"wrap": "wrap"
+				},
+				"parentName": "MainHeader",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "RunAveragePriceYachtWebService",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(RunAveragePriceYachtWebService_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"clicked": {
+						"request": "usr.AvgRunWebServiceRequest"
+					},
+					"clickMode": "default",
+					"icon": "settings-button-icon"
+				},
+				"parentName": "FlexContainer_fiqa0at",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "PushYachtRentalButton",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(PushYachtRentalButton_caption)#",
+					"color": "warn",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrAutoAddYachtRentals",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "YachtId"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_fiqa0at",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
 				"name": "Button_wvpw6jn",
 				"values": {
 					"type": "crt.Button",
@@ -936,7 +1010,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
 								"params": {
-									"minValue": 100,
+									"minValue": 101,
 									"message": "#ResourceString(PriceCannotBeLess)#"
 								}
 							}
@@ -950,7 +1024,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
 								"params": {
-									"minValue": 3,
+									"minValue": 5,
 									"message": "#ResourceString(LengthCannotBeLess)#"
 								}
 							}
@@ -988,9 +1062,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 						"modelConfig": {
 							"path": "PDS.UsrComment"
 						},
-						/* The property that contains the list of attribute validators. */
 						"validators": {
-							/* Flag the field as required. */
 							"required": {
 								"type": "crt.Required"
 							}
@@ -1248,6 +1320,41 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 					/* Call the next handler if it exists and return its result. */
 		            return next?.handle(request);
 			        }
+			},
+			{
+				request: "usr.AvgRunWebServiceRequest",
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Run web service Average Price Of Yacht button works...");
+
+					// get id from drive type lookup type object
+					var typeObject = await request.$context.PDS_UsrDriveType_waalbgw;
+					var driveTypeId = "";
+					if (typeObject) {
+						driveTypeId = typeObject.value;
+					}
+					/* Create an instance of the HTTP client from @creatio-devkit/common. */
+					const httpClientService = new sdk.HttpClientService();
+					
+					/* Specify the URL to run web service method. */
+					const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+					const transferName = "rest";
+					const serviceName = "YachtService";
+					const methodName = "GetAvgPriceByDriveTypeId";
+					const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+					
+					//const endpoint = "http://localhost/D1_Studio/0/rest/YachtService/GetAvgPriceByDriveTypeId";
+					/* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
+					var params = {
+						driveTypeId: driveTypeId
+					};
+					const response = await httpClientService.post(endpoint, params);
+					
+					console.log("response avg price all yacht = " + response.body.GetAvgPriceByDriveTypeIdResult);
+					
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
 			}
 			
 		]/**SCHEMA_HANDLERS*/,
