@@ -50,6 +50,8 @@
 			<Item Name="Parameters.RentalEnd.DisplayValue" Value="[#System variable.Current Time and Date#]" />
 			<Item Name="Parameters.RentalStart.Caption" Value="Rental start" />
 			<Item Name="Parameters.RentalStart.DisplayValue" Value="[#System variable.Current Time and Date#]" />
+			<Item Name="Parameters.TotalRentalDays.Caption" Value="TotalRentalDays" />
+			<Item Name="Parameters.TotalRentalDays.DisplayValue" Value="([#Rental end#]-[#Rental start#]).TotalDays + 1" />
 			<Item Name="Parameters.YachtId.Caption" Value="YachtId" />
 		</Items>
 	</Group>
